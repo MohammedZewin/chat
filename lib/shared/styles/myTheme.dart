@@ -6,7 +6,7 @@ class MyThemeData {
   static ThemeData lightTheme = ThemeData(
       primaryColor: primaryColor,
       scaffoldBackgroundColor: greenBackground,
-      colorScheme: ColorScheme(
+      colorScheme: const ColorScheme(
           brightness: Brightness.light,
           primary: primaryColor,
           onPrimary: Colors.white,
@@ -18,10 +18,10 @@ class MyThemeData {
           onBackground: primaryColor,
           surface: Colors.grey,
           onSurface: Colors.black),
-      appBarTheme: AppBarTheme(
+      appBarTheme: const AppBarTheme(
           backgroundColor: primaryColor,
           iconTheme: IconThemeData(color: Colors.white)),
-      textTheme: TextTheme(
+      textTheme: const TextTheme(
         headline1: TextStyle(
             fontSize: 30, fontWeight: FontWeight.bold, color: Colors.white),
         subtitle1: TextStyle(
@@ -30,8 +30,8 @@ class MyThemeData {
             fontSize: 20, fontWeight: FontWeight.bold, color: colorGreen),
       ),
       floatingActionButtonTheme:
-          FloatingActionButtonThemeData(backgroundColor: primaryColor),
-      bottomNavigationBarTheme: BottomNavigationBarThemeData(
+          const FloatingActionButtonThemeData(backgroundColor: primaryColor),
+      bottomNavigationBarTheme: const BottomNavigationBarThemeData(
           backgroundColor: Colors.white,
           selectedItemColor: primaryColor,
           unselectedItemColor: Colors.grey));
@@ -39,7 +39,7 @@ class MyThemeData {
   static ThemeData darkTheme = ThemeData(
       primaryColor: primaryColor,
       scaffoldBackgroundColor: greenBackground,
-      colorScheme: ColorScheme(
+      colorScheme: const ColorScheme(
           brightness: Brightness.light,
           primary: primaryColor,
           onPrimary: Colors.white,
@@ -51,10 +51,10 @@ class MyThemeData {
           onBackground: primaryColor,
           surface: Colors.grey,
           onSurface: Colors.black),
-      appBarTheme: AppBarTheme(
+      appBarTheme: const AppBarTheme(
           backgroundColor: primaryColor,
           iconTheme: IconThemeData(color: Colors.white)),
-      textTheme: TextTheme(
+      textTheme: const TextTheme(
         headline1: TextStyle(
             fontSize: 30, fontWeight: FontWeight.bold, color: Colors.white),
         subtitle1: TextStyle(
@@ -62,7 +62,7 @@ class MyThemeData {
         subtitle2: TextStyle(
             fontSize: 20, fontWeight: FontWeight.bold, color: colorGreen),
       ),
-      bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      bottomNavigationBarTheme: const BottomNavigationBarThemeData(
           backgroundColor: Colors.white,
           selectedItemColor: primaryColor,
           unselectedItemColor: Colors.grey));

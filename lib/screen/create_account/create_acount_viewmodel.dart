@@ -6,10 +6,14 @@ import 'package:newchat/shared/base.dart';
 
 class CreateAccountViewModel extends baseViewModel<CreateAccountNavigator> {
   void CreatAccountWithFirbaseAuth(String email, String password) async {
+
+    var auth = FirebaseAuth.instance;
+    String message = '';
+
     try {
       navigator!.showLoading();
       final credential =
-          await FirebaseAuth.instance.createUserWithEmailAndPassword(
+          await auth.createUserWithEmailAndPassword(
         email: email,
         password: password,
       );
@@ -26,6 +30,10 @@ class CreateAccountViewModel extends baseViewModel<CreateAccountNavigator> {
     } catch (e) {
       navigator!.hideLoading();
       navigator!.Message(e.toString());
+    }
+    if (message != '') {
+      navigator!.hideLoading();
+      navigator!.showLoading(message: message);
     }
   }
 }
